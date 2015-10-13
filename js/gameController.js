@@ -7,12 +7,14 @@ function GameController(){
   this.step = 0
   this.move = getMove
   function getMove(cell){
-    if(this.step % 2 === 0){
-      this.board[cell] = 'x'
-      this.step++
-    } else {
-      this.board[cell] = 'o'
-      this.step++
+    if(!this.board[cell]){
+      if(this.step % 2 === 0){
+        this.board[cell] = 'x'
+        this.step++
+      } else {
+        this.board[cell] = 'o'
+        this.step++
+      }
     }
   }
 }
