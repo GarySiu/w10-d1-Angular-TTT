@@ -23,6 +23,7 @@ html {
   display: inline-block;
   width: 100px;
   height: 100px;
+  padding-top: 50px;
   margin: 0;
   border: 1px solid #000;
 }
