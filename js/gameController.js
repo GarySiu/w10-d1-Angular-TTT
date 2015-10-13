@@ -3,15 +3,15 @@ angular.module('tttGame')
 
 function GameController(){
   this.title = "Tic-Tac-Toe in Angular!"
-  // this.width = 3;
-  // this.height = 3;
-  this.board = ['0','1','2','3','4','5','6','7','8'];
+  this.board = ['','','','','','','','','']
+  this.step = 0
+  this.move = function(){
+    if(this.step % 2 === 0) {
+      this.step++
+      return 'x'
+    } else {
+      this.step++
+      return 'o'
+    }
+  }
 }
-
-// function generateBoard(width, height){
-//   var board = []
-//   for(i = 0; i < width * height; i++){
-//     board.push([])
-//   }
-//   return board;
-// }
