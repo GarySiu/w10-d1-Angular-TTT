@@ -9,13 +9,8 @@ function GameController(){
   
   function getMove(cell){
     if(!this.board[cell]){
-      if(this.step % 2 === 0){
-        this.board[cell] = 'x'
-        this.step++
-      } else {
-        this.board[cell] = 'o'
-        this.step++
-      }
+      this.step % 2 === 0 ? this.board[cell] = 'x' : this.board[cell] = 'o'
+      this.step++
     }
   }
 
@@ -25,4 +20,5 @@ function GameController(){
     this.board = ['','','','','','','','','']
     this.step = 0
   }
+
 }
