@@ -6,6 +6,7 @@ function GameController(){
   this.board = ['','','','','','','','','']
   this.step = 0
   this.move = getMove
+  
   function getMove(cell){
     if(!this.board[cell]){
       if(this.step % 2 === 0){
@@ -17,5 +18,11 @@ function GameController(){
       }
     }
   }
-}
 
+  this.reset = resetBoard
+
+  function resetBoard(){
+    this.board = ['','','','','','','','','']
+    this.step = 0
+  }
+}

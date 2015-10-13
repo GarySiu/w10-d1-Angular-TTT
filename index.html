@@ -21,6 +21,9 @@
       ng-attr-id="{{ $index }}"
       ng-click="game.move($index)">{{ cell }}</div>
     </div>
+    <div class="menu">
+      <a ng-click="game.reset()">Reset</a>
+    </div>
   </div>
 </main>
 </body>
