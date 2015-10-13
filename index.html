@@ -18,7 +18,6 @@
         <div 
         class="cell"
         ng-repeat="cell in game.board track by $index"
-        ng-attr-id="{{ $index }}"
         ng-click="game.move($index)">{{ cell }}</div>
       </div>
       <div class="menu">
